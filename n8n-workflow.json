@@ -1,0 +1,124 @@
+{
+    "name": "Wisdom Camp Registrations",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "wisdom-camp-registration",
+                "responseMode": "lastNode",
+                "options": {}
+            },
+            "id": "e0d0afaa-252c-4cf8-8c14-722a3ca63d84",
+            "name": "Webhook",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1.1,
+            "position": [
+                380,
+                240
+            ],
+            "webhookId": "wisdom-camp-registration"
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "documentId": {
+                    "__rl": true,
+                    "value": "ENTER_YOUR_GOOGLE_SHEET_ID_HERE",
+                    "mode": "id"
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "value": "Sheet1",
+                    "mode": "name"
+                },
+                "dataMode": "defineBelow",
+                "valuesUi": {
+                    "values": [
+                        {
+                            "column": "Program Name",
+                            "value": "={{ $json.body.programName }}"
+                        },
+                        {
+                            "column": "Student Name",
+                            "value": "={{ $json.body.studentName }}"
+                        },
+                        {
+                            "column": "Standard",
+                            "value": "={{ $json.body.standard }}"
+                        },
+                        {
+                            "column": "School Name",
+                            "value": "={{ $json.body.schoolName }}"
+                        },
+                        {
+                            "column": "Parent Phone",
+                            "value": "={{ $json.body.parentPhone }}"
+                        },
+                        {
+                            "column": "Parent WhatsApp",
+                            "value": "={{ $json.body.parentWhatsapp }}"
+                        },
+                        {
+                            "column": "Submitted At",
+                            "value": "={{ $json.body.submittedAt }}"
+                        }
+                    ]
+                },
+                "options": {}
+            },
+            "id": "b0cfdd5b-f111-4de2-bcab-088c5efb49ba",
+            "name": "Google Sheets",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4.1,
+            "position": [
+                600,
+                240
+            ]
+        },
+        {
+            "parameters": {
+                "respondWith": "json",
+                "responseBody": "{\n  \"success\": true,\n  \"message\": \"Registration received\"\n}",
+                "options": {}
+            },
+            "id": "c1f1fdb1-f111-4de2-bcdc-088c5efbaeca",
+            "name": "Respond to Webhook",
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1,
+            "position": [
+                820,
+                240
+            ]
+        }
+    ],
+    "pinData": {},
+    "connections": {
+        "Webhook": {
+            "main": [
+                [
+                    {
+                        "node": "Google Sheets",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Google Sheets": {
+            "main": [
+                [
+                    {
+                        "node": "Respond to Webhook",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "active": false,
+    "settings": {
+        "executionOrder": "v1"
+    },
+    "versionId": "f2ccdbb3-9040-4c3e-bfa3-0eb47d159a22"
+}

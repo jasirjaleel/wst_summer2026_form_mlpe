@@ -1,0 +1,802 @@
+{
+    "nodes": [
+        {
+            "parameters": {
+                "rules": {
+                    "values": [
+                        {
+                            "conditions": {
+                                "options": {
+                                    "caseSensitive": true,
+                                    "leftValue": "",
+                                    "typeValidation": "strict",
+                                    "version": 1
+                                },
+                                "conditions": [
+                                    {
+                                        "leftValue": "={{ $json.body.programName }}",
+                                        "rightValue": "Butterflies",
+                                        "operator": {
+                                            "type": "string",
+                                            "operation": "equals",
+                                            "name": "filter.operator.equals"
+                                        },
+                                        "id": "32c26b6e-eacd-4357-8091-2091eb41fc49"
+                                    }
+                                ],
+                                "combinator": "and"
+                            },
+                            "renameOutput": true,
+                            "outputKey": "Butterflies"
+                        },
+                        {
+                            "conditions": {
+                                "options": {
+                                    "caseSensitive": true,
+                                    "leftValue": "",
+                                    "typeValidation": "strict",
+                                    "version": 1
+                                },
+                                "conditions": [
+                                    {
+                                        "leftValue": "={{ $json.body.programName }}",
+                                        "rightValue": "Bliss",
+                                        "operator": {
+                                            "type": "string",
+                                            "operation": "equals",
+                                            "name": "filter.operator.equals"
+                                        },
+                                        "id": "89523762-eac3-45af-9467-9e33396f3633"
+                                    }
+                                ],
+                                "combinator": "and"
+                            },
+                            "renameOutput": true,
+                            "outputKey": "Bliss"
+                        },
+                        {
+                            "conditions": {
+                                "options": {
+                                    "caseSensitive": true,
+                                    "leftValue": "",
+                                    "typeValidation": "strict",
+                                    "version": 1
+                                },
+                                "conditions": [
+                                    {
+                                        "leftValue": "={{ $json.body.programName }}",
+                                        "rightValue": "Jalakam",
+                                        "operator": {
+                                            "type": "string",
+                                            "operation": "equals",
+                                            "name": "filter.operator.equals"
+                                        },
+                                        "id": "6cd2a689-111c-4ea3-95d6-a0df041f09c1"
+                                    }
+                                ],
+                                "combinator": "and"
+                            },
+                            "renameOutput": true,
+                            "outputKey": "Jalakam"
+                        },
+                        {
+                            "conditions": {
+                                "options": {
+                                    "caseSensitive": true,
+                                    "leftValue": "",
+                                    "typeValidation": "strict",
+                                    "version": 1
+                                },
+                                "conditions": [
+                                    {
+                                        "id": "34819454-3659-469a-9927-8a18b8e2ea28",
+                                        "leftValue": "={{ $json.body.programName }}",
+                                        "rightValue": "SummeRise",
+                                        "operator": {
+                                            "type": "string",
+                                            "operation": "equals",
+                                            "name": "filter.operator.equals"
+                                        }
+                                    }
+                                ],
+                                "combinator": "and"
+                            },
+                            "renameOutput": true,
+                            "outputKey": "Summerise"
+                        }
+                    ]
+                },
+                "options": {
+                    "fallbackOutput": "extra"
+                }
+            },
+            "id": "720f0d7e-a6aa-4efa-9cff-3516a3a987a4",
+            "name": "Route by Program",
+            "type": "n8n-nodes-base.switch",
+            "typeVersion": 3,
+            "position": [
+                96,
+                -128
+            ]
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "documentId": {
+                    "__rl": true,
+                    "value": "12El_FUsq0Hwq3LnCdSqujRcA2wjtLDfZnEjaeGLJkOE",
+                    "mode": "list",
+                    "cachedResultName": "Summer Camp Registration (MLPW)",
+                    "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12El_FUsq0Hwq3LnCdSqujRcA2wjtLDfZnEjaeGLJkOE/edit?usp=drivesdk"
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "value": "Butterflies",
+                    "mode": "name"
+                },
+                "columns": {
+                    "mappingMode": "defineBelow",
+                    "value": {
+                        "name": "={{ $json.body.studentName }}",
+                        "class": "={{ $json.body.standard }}",
+                        "school": "={{ $json.body.schoolName }}",
+                        "phone": "={{ $json.body.studentPhone }}",
+                        "whatsapp": "={{ $json.body.studentWhatsapp }}",
+                        "zone": "={{ $json.body.zone }}",
+                        "place": "={{ $json.body.place }}",
+                        "timestamp": "={{ new Date($json.body.submittedAt).toLocaleString('en-IN', {\n  timeZone: 'Asia/Kolkata',\n  year: 'numeric',\n  month: 'short',\n  day: '2-digit',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit',\n  hour12: true\n}) }}",
+                        "gender": "={{ $json.body.gender }}"
+                    },
+                    "matchingColumns": [],
+                    "schema": [
+                        {
+                            "id": "timestamp",
+                            "displayName": "timestamp",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "name",
+                            "displayName": "name",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "gender",
+                            "displayName": "gender",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "class",
+                            "displayName": "class",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "school",
+                            "displayName": "school",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "zone",
+                            "displayName": "zone",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "place",
+                            "displayName": "place",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "phone",
+                            "displayName": "phone",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "whatsapp",
+                            "displayName": "whatsapp",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        }
+                    ],
+                    "attemptToConvertTypes": false,
+                    "convertFieldsToString": false
+                },
+                "options": {}
+            },
+            "id": "6bf38ae5-e846-4104-974e-fcfbf6ebee68",
+            "name": "GS: Butterflies",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4.1,
+            "position": [
+                368,
+                -336
+            ]
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "documentId": {
+                    "__rl": true,
+                    "value": "12El_FUsq0Hwq3LnCdSqujRcA2wjtLDfZnEjaeGLJkOE",
+                    "mode": "list",
+                    "cachedResultName": "Summer Camp Registration (MLPW)",
+                    "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12El_FUsq0Hwq3LnCdSqujRcA2wjtLDfZnEjaeGLJkOE/edit?usp=drivesdk"
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "value": "Bliss",
+                    "mode": "name"
+                },
+                "columns": {
+                    "mappingMode": "defineBelow",
+                    "value": {
+                        "name": "={{ $json.body.studentName }}",
+                        "class": "={{ $json.body.standard }}",
+                        "school": "={{ $json.body.schoolName }}",
+                        "phone": "={{ $json.body.studentPhone }}",
+                        "whatsapp": "={{ $json.body.studentWhatsapp }}",
+                        "zone": "={{ $json.body.zone }}",
+                        "place": "={{ $json.body.place }}",
+                        "timestamp": "={{ new Date($json.body.submittedAt).toLocaleString('en-IN', {\n  timeZone: 'Asia/Kolkata',\n  year: 'numeric',\n  month: 'short',\n  day: '2-digit',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit',\n  hour12: true\n}) }}",
+                        "parent_phone_number": "={{ $json.body.parentPhone || '-' }}",
+                        "gender": "={{ $json.body.gender }}"
+                    },
+                    "matchingColumns": [],
+                    "schema": [
+                        {
+                            "id": "timestamp",
+                            "displayName": "timestamp",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "name",
+                            "displayName": "name",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "gender",
+                            "displayName": "gender",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "class",
+                            "displayName": "class",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "school",
+                            "displayName": "school",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "zone",
+                            "displayName": "zone",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "place",
+                            "displayName": "place",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "phone",
+                            "displayName": "phone",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "whatsapp",
+                            "displayName": "whatsapp",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "parent_phone_number",
+                            "displayName": "parent_phone_number",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        }
+                    ],
+                    "attemptToConvertTypes": false,
+                    "convertFieldsToString": false
+                },
+                "options": {}
+            },
+            "id": "1aa2245b-5031-496c-923a-0023fe2794c0",
+            "name": "GS: Bliss",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4.1,
+            "position": [
+                368,
+                -128
+            ]
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "documentId": {
+                    "__rl": true,
+                    "value": "12El_FUsq0Hwq3LnCdSqujRcA2wjtLDfZnEjaeGLJkOE",
+                    "mode": "list",
+                    "cachedResultName": "Summer Camp Registration (MLPW)",
+                    "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12El_FUsq0Hwq3LnCdSqujRcA2wjtLDfZnEjaeGLJkOE/edit?usp=drivesdk"
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "value": "Jalakam",
+                    "mode": "name"
+                },
+                "columns": {
+                    "mappingMode": "defineBelow",
+                    "value": {
+                        "name": "={{ $json.body.studentName }}",
+                        "class": "={{ $json.body.standard }}",
+                        "school": "={{ $json.body.schoolName }}",
+                        "phone": "={{ $json.body.studentPhone }}",
+                        "whatsapp": "={{ $json.body.studentWhatsapp }}",
+                        "zone": "={{ $json.body.zone }}",
+                        "place": "={{ $json.body.place }}",
+                        "timestamp": "={{ new Date($json.body.submittedAt).toLocaleString('en-IN', {\n  timeZone: 'Asia/Kolkata',\n  year: 'numeric',\n  month: 'short',\n  day: '2-digit',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit',\n  hour12: true\n}) }}",
+                        "parent_phone_number": "={{ $json.body.parentPhone || '-' }}",
+                        "gender": "={{ $json.body.gender }}"
+                    },
+                    "matchingColumns": [],
+                    "schema": [
+                        {
+                            "id": "timestamp",
+                            "displayName": "timestamp",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "name",
+                            "displayName": "name",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "gender",
+                            "displayName": "gender",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "class",
+                            "displayName": "class",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "school",
+                            "displayName": "school",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "zone",
+                            "displayName": "zone",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "place",
+                            "displayName": "place",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "phone",
+                            "displayName": "phone",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "whatsapp",
+                            "displayName": "whatsapp",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "parent_phone_number",
+                            "displayName": "parent_phone_number",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        }
+                    ],
+                    "attemptToConvertTypes": false,
+                    "convertFieldsToString": false
+                },
+                "options": {}
+            },
+            "id": "f5fffe0e-c696-48a6-a995-e68eb2bffdea",
+            "name": "GS: Jalakam",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4.1,
+            "position": [
+                368,
+                64
+            ]
+        },
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "5c1212a6-0aea-4b75-b315-1825eaaeeeae",
+                "responseMode": "lastNode",
+                "options": {}
+            },
+            "id": "e7ffdd50-3286-4774-9060-9ceb47420b69",
+            "name": "Webhook1",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1.1,
+            "position": [
+                -112,
+                -128
+            ],
+            "webhookId": "5c1212a6-0aea-4b75-b315-1825eaaeeeae"
+        },
+        {
+            "parameters": {
+                "respondWith": "json",
+                "responseBody": "{\n  \"success\": true,\n  \"message\": \"Registration received\"\n}",
+                "options": {}
+            },
+            "id": "9468dce5-4f73-4b60-b1fb-dd71ef33f1ab",
+            "name": "Respond to Webhook1",
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1,
+            "position": [
+                672,
+                -128
+            ]
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "documentId": {
+                    "__rl": true,
+                    "value": "12El_FUsq0Hwq3LnCdSqujRcA2wjtLDfZnEjaeGLJkOE",
+                    "mode": "list",
+                    "cachedResultName": "Summer Camp Registration (MLPW)",
+                    "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12El_FUsq0Hwq3LnCdSqujRcA2wjtLDfZnEjaeGLJkOE/edit?usp=drivesdk"
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "value": "SummeRise",
+                    "mode": "name"
+                },
+                "columns": {
+                    "mappingMode": "defineBelow",
+                    "value": {
+                        "name": "={{ $json.body.studentName }}",
+                        "class": "={{ $json.body.standard }}",
+                        "school": "={{ $json.body.schoolName }}",
+                        "phone": "={{ $json.body.studentPhone }}",
+                        "whatsapp": "={{ $json.body.studentWhatsapp }}",
+                        "zone": "={{ $json.body.zone }}",
+                        "place": "={{ $json.body.place }}",
+                        "timestamp": "={{ new Date($json.body.submittedAt).toLocaleString('en-IN', {\n  timeZone: 'Asia/Kolkata',\n  year: 'numeric',\n  month: 'short',\n  day: '2-digit',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit',\n  hour12: true\n}) }}",
+                        "parent_phone_number": "={{ $json.body.parentPhone || '-' }}",
+                        "gender": "={{ $json.body.gender }}"
+                    },
+                    "matchingColumns": [],
+                    "schema": [
+                        {
+                            "id": "timestamp",
+                            "displayName": "timestamp",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "name",
+                            "displayName": "name",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "gender",
+                            "displayName": "gender",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "class",
+                            "displayName": "class",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "school",
+                            "displayName": "school",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "zone",
+                            "displayName": "zone",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "place",
+                            "displayName": "place",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        },
+                        {
+                            "id": "phone",
+                            "displayName": "phone",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "whatsapp",
+                            "displayName": "whatsapp",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true
+                        },
+                        {
+                            "id": "parent_phone_number",
+                            "displayName": "parent_phone_number",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "canBeUsedToMatch": true,
+                            "removed": false
+                        }
+                    ],
+                    "attemptToConvertTypes": false,
+                    "convertFieldsToString": false
+                },
+                "options": {}
+            },
+            "id": "e9ccb38e-00b5-4e91-b9d7-9ac59f50aa8b",
+            "name": "GS: SummeRise",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4.1,
+            "position": [
+                352,
+                240
+            ]
+        }
+    ],
+    "connections": {
+        "Route by Program": {
+            "main": [
+                [
+                    {
+                        "node": "GS: Butterflies",
+                        "type": "main",
+                        "index": 0
+                    }
+                ],
+                [
+                    {
+                        "node": "GS: Bliss",
+                        "type": "main",
+                        "index": 0
+                    }
+                ],
+                [
+                    {
+                        "node": "GS: Jalakam",
+                        "type": "main",
+                        "index": 0
+                    }
+                ],
+                [
+                    {
+                        "node": "GS: SummeRise",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "GS: Butterflies": {
+            "main": [
+                [
+                    {
+                        "node": "Respond to Webhook1",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "GS: Bliss": {
+            "main": [
+                [
+                    {
+                        "node": "Respond to Webhook1",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "GS: Jalakam": {
+            "main": [
+                [
+                    {
+                        "node": "Respond to Webhook1",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Webhook1": {
+            "main": [
+                [
+                    {
+                        "node": "Route by Program",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "GS: SummeRise": {
+            "main": [
+                [
+                    {
+                        "node": "Respond to Webhook1",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "pinData": {},
+    "meta": {
+        "templateCredsSetupCompleted": true,
+        "instanceId": "fb1bda7566d877c460f2165e2a3db1333e00de8c66865a937f17ab98a78883eb"
+    }
+}

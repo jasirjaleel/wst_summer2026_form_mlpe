@@ -32,7 +32,7 @@ import FloatingWhatsApp from "./components/FloatingWhatsApp";
 export const metadata: Metadata = {
   title: "Wisdom Students — Summer Camps 2026",
   description:
-    "Register for Wisdom Students Malappuram East District summer camp programs — Butterflies, Bliss, and Jalakam. A summer that shapes who you become.",
+    "Register for Wisdom Students Malappuram East District Committee summer camp programs — Butterflies, Bliss, and Jalakam. A summer that shapes who you become.",
 };
 
 export default function RootLayout({

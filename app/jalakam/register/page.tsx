@@ -6,9 +6,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Register — Jalakam | Wisdom Students",
+    title: "Register — Jalakam | Wisdom Students Malappuram East District Committee",
     description:
-        "Register for Jalakam Sahavas Camp — a 3-day summer camp for students by Wisdom Students Thrissur.",
+        "Register for Jalakam Sahavas Camp — a 2-day summer camp for students by Wisdom Students Malappuram East District Committee.",
 };
 
 export default function JalakamRegister() {

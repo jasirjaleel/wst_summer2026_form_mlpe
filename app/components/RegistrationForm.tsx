@@ -276,23 +276,23 @@ export default function RegistrationForm({
                     <option value="" disabled>
                         Select zone
                     </option>
-                    <option value="Aanamangad">Aanamangad</option>
+                    <option value="Perintalmanna">Perintalmanna</option>
+                    <option value="Pandikkad">Pandikkad</option>
+                    <option value="Karuvarakund">Karuvarakund</option>
+                    <option value="Kalikavu">Kalikavu</option>
                     <option value="Amarambalam">Amarambalam</option>
-                    <option value="Angadipuram">Angadipuram</option>
+                    <option value="Wandoor">Wandoor</option>
+                    <option value="Edavanna">Edavanna</option>
+                    <option value="Othayi">Othayi</option>
+                    <option value="Mampad">Mampad</option>
+                    <option value="Nilamboor">Nilamboor</option>
                     <option value="Chungathara">Chungathara</option>
                     <option value="Edakkara">Edakkara</option>
-                    <option value="Edavanna">Edavanna</option>
-                    <option value="Kalikavu">Kalikavu</option>
-                    <option value="Karuvarakund">Karuvarakund</option>
-                    <option value="Mampad">Mampad</option>
                     <option value="Moothedam">Moothedam</option>
-                    <option value="Nilamboor">Nilamboor</option>
-                    <option value="Othayi">Othayi</option>
-                    <option value="Pandikkad">Pandikkad</option>
+                    <option value="Angaadipuram">Angaadipuram</option>
+                    <option value="Aanamangad">Aanamangad</option>
                     <option value="Pattikkad">Pattikkad</option>
-                    <option value="Perintalmanna">Perintalmanna</option>
                     <option value="Pulamanthole">Pulamanthole</option>
-                    <option value="Wandoor">Wandoor</option>
                 </select>
             </div>
 

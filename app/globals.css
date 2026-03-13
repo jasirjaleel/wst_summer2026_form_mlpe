@@ -1,16 +1,16 @@
 /* ===== DESIGN TOKENS ===== */
 :root {
-  --bg: #EAFFD0;
+  --bg: #FEFFD3;
   --surface: #FFFFFF;
-  --border: #DDE8B9;
+  --border: #BCD9A2;
   --text: #2D2A26;
   --muted: #6B7E6B;
-  --accent: #F38181;
-  --accent-hover: #E06B6B;
-  --green: #95E1D3;
-  --cyan: #95E1D3;
-  --yellow: #FCE38A;
-  --red: #F38181;
+  --accent: #A82323;
+  --accent-hover: #8B1A1A;
+  --green: #6D9E51;
+  --cyan: #BCD9A2;
+  --yellow: #FEFFD3;
+  --red: #A82323;
   --radius: 12px;
   --max-width: 820px;
 }
@@ -152,7 +152,7 @@ textarea {
 
 .program-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(149, 225, 211, 0.4);
+  border-color: rgba(188, 217, 162, 0.4);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
 
@@ -313,7 +313,7 @@ textarea {
 .btn-submit:hover {
   background: var(--accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(243, 129, 129, 0.3);
+  box-shadow: 0 4px 16px rgba(168, 35, 35, 0.3);
 }
 
 /* ===== FOOTER ===== */
@@ -445,7 +445,7 @@ textarea {
 .form-input:focus,
 .form-select:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(243, 129, 129, 0.15);
+  box-shadow: 0 0 0 3px rgba(168, 35, 35, 0.15);
 }
 
 .form-input::placeholder {

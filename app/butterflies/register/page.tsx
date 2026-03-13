@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Register — Butterflies | Wisdom Students Malappuram East District Committee",
     description:
-        "Register for Butterflies Kids School — a 2-day summer camp for Class 1 - 4 students by Wisdom Students Malappuram East District Committee.",
+        "Register for Butterflies Kids School — a 2-day summer camp for Class 1 - 4 students (Boys & Girls) by Wisdom Students Malappuram East District Committee.",
 };
 
 export default function ButterfliesRegister() {
@@ -24,7 +24,7 @@ export default function ButterfliesRegister() {
 
                 <div className="register-header fade-up fade-up-2">
                     <span className="card-badge">Primary</span>
-                    <h1 className="register-title">Butterflies</h1>
+                    <h1 className="register-title">Butterflies (Boys & Girls)</h1>
                     <p className="register-date">9, 10 April 2026 · 2 Days · Perinthalmanna</p>
                 </div>
 

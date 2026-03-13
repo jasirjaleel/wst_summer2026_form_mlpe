@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Register — Jalakam | Wisdom Students Malappuram East District Committee",
     description:
-        "Register for Jalakam Sahavas Camp — a 2-day summer camp for students by Wisdom Students Malappuram East District Committee.",
+        "Register for Jalakam Residential Camp — a 2-day summer camp for students by Wisdom Students Malappuram East District Committee.",
 };
 
 export default function JalakamRegister() {
@@ -26,7 +26,7 @@ export default function JalakamRegister() {
                 <div className="register-header fade-up fade-up-2">
                     <span className="card-badge">High School</span>
                     <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                        <h1 className="register-title">Jalakam</h1>
+                        <h1 className="register-title">Jalakam (Residential Camp)</h1>
                         <Image
                             src="/jalakam-logo.png"
                             alt="Jalakam Logo"

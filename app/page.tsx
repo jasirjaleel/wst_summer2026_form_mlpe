@@ -35,7 +35,7 @@ export default function Home() {
             </div>
 
             <div className="hero-subtext fade-up fade-up-4" style={{ marginTop: "20px", fontSize: "20px", lineHeight: 1.8, color: "var(--text)", fontFamily: "var(--font-malayalam)" }}>
-              മക്കൾക്ക് അറിവും മൂല്യങ്ങളും പകർന്നു നൽകുക എന്നത് ഏതൊരു മാതാപിതാക്കളുടെയും സ്വപ്നമാണ്. ഈ വേനലവധിക്കാലം ഏറ്റവും ലക്ഷ്യബോധത്തോടെയും സന്തോഷത്തോടെയും ചെലവഴിക്കാൻ വിസ്ഡം സ്റ്റുഡൻ്റ്സ് മലപ്പുറം ഈസ്റ്റ് ഒരുക്കുന്ന ക്യാമ്പുകളിലേക്ക് സ്വാഗതം.
+              ഈ വേനലവധിക്കാലം ഏറ്റവും ലക്ഷ്യബോധത്തോടെയും സന്തോഷത്തോടെയും ചെലവഴിക്കാൻ വിസ്ഡം സ്റ്റുഡൻ്റ്സ് മലപ്പുറം ഈസ്റ്റ് ജില്ല ഒരുക്കുന്ന ക്യാമ്പുകളിലേക്ക് സ്വാഗതം.
             </div>
 
             {/* Scroll Indicator */}
@@ -69,7 +69,7 @@ export default function Home() {
             badge="Primary"
             title="Butterflies"
             tagline="Kids School"
-            forStudents="For Class 1 - 4 students"
+            forStudents="For Class 1 - 4 students (Boys & Girls)"
             dates="9, 10 April 2026"
             duration="2 Days"
             href="/butterflies/register"
@@ -79,7 +79,7 @@ export default function Home() {
             logoClass="butterflies-logo-wrapper"
             venue="Perinthalmanna"
             coordinatorPhone="7025589008"
-            fee="₹1200"
+            fee="₹1500"
             delay={1}
           />
 
@@ -88,7 +88,7 @@ export default function Home() {
             badge="UP Students"
             title="Bliss"
             tagline="Summer Hut for UP Students"
-            forStudents="For Std 5, 6 & 7 students"
+            forStudents="For Std 5, 6 & 7 students (Boys only)"
             dates="14, 15 April 2026"
             duration="2 Days"
             href="/bliss/register"
@@ -106,7 +106,7 @@ export default function Home() {
             number="03 —"
             badge="High School"
             title="Jalakam"
-            tagline="Sahavas Camp"
+            tagline="Residential Camp"
             forStudents="For Boys & Girls"
             dates="14, 15 April 2026"
             duration="2 Days"
